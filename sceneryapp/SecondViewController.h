@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+#import <MobileCoreServices/MobileCoreServices.h>
 
+@interface SecondViewController : UIViewController
+<UIImagePickerControllerDelegate, 
+UINavigationControllerDelegate>
+{
+    UIImageView *imageView;
+    BOOL newMedia;
+}
+
+@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+- (IBAction)useCamera;
+- (IBAction)useCameraRoll;
 @end
