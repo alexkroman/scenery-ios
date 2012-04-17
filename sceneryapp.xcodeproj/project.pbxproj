@@ -43,17 +43,17 @@
 		3A116BE7153D291800B2DA2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3A116BE9153D291800B2DA2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3A116BEB153D291800B2DA2D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3A116BEF153D291800B2DA2D /* sceneryapp-Info.plist */ = {isa = PBXFileReference; path = "sceneryapp-Info.plist"; sourceTree = "<group>"; };
+		3A116BEF153D291800B2DA2D /* sceneryapp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sceneryapp-Info.plist"; sourceTree = "<group>"; };
 		3A116BF1153D291800B2DA2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3A116BF3153D291800B2DA2D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3A116BF5153D291800B2DA2D /* sceneryapp-Prefix.pch */ = {isa = PBXFileReference; path = "sceneryapp-Prefix.pch"; sourceTree = "<group>"; };
-		3A116BF6153D291800B2DA2D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A116BF5153D291800B2DA2D /* sceneryapp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sceneryapp-Prefix.pch"; sourceTree = "<group>"; };
+		3A116BF6153D291800B2DA2D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3A116BF7153D291900B2DA2D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3A116BF9153D291900B2DA2D /* FirstViewController.h */ = {isa = PBXFileReference; path = FirstViewController.h; sourceTree = "<group>"; };
+		3A116BF9153D291900B2DA2D /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		3A116BFA153D291900B2DA2D /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		3A116BFC153D291900B2DA2D /* first.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = first.png; sourceTree = "<group>"; };
 		3A116BFE153D291900B2DA2D /* first@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "first@2x.png"; sourceTree = "<group>"; };
-		3A116C00153D291900B2DA2D /* SecondViewController.h */ = {isa = PBXFileReference; path = SecondViewController.h; sourceTree = "<group>"; };
+		3A116C00153D291900B2DA2D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		3A116C01153D291900B2DA2D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		3A116C03153D291900B2DA2D /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		3A116C05153D291900B2DA2D /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
@@ -61,9 +61,9 @@
 		3A116C0B153D291900B2DA2D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SecondViewController.xib; sourceTree = "<group>"; };
 		3A116C12153D291900B2DA2D /* sceneryappTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sceneryappTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A116C13153D291900B2DA2D /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3A116C1B153D291900B2DA2D /* sceneryappTests-Info.plist */ = {isa = PBXFileReference; path = "sceneryappTests-Info.plist"; sourceTree = "<group>"; };
+		3A116C1B153D291900B2DA2D /* sceneryappTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sceneryappTests-Info.plist"; sourceTree = "<group>"; };
 		3A116C1D153D291900B2DA2D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3A116C1F153D291900B2DA2D /* sceneryappTests.h */ = {isa = PBXFileReference; path = sceneryappTests.h; sourceTree = "<group>"; };
+		3A116C1F153D291900B2DA2D /* sceneryappTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sceneryappTests.h; sourceTree = "<group>"; };
 		3A116C20153D291900B2DA2D /* sceneryappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sceneryappTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
