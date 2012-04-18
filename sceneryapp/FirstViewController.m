@@ -25,7 +25,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.title = NSLocalizedString(@"New", @"New");
+        self.title = NSLocalizedString(@"Browse", @"Browse");
         self.tabBarItem.image = [UIImage imageNamed:@"eye"];
     }
     return self;
