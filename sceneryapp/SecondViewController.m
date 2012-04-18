@@ -93,16 +93,19 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                           objectForKey:UIImagePickerControllerOriginalImage];
         NSData *imageData = UIImageJPEGRepresentation(originalImage, 0.7);
        
-        NSURL *url = [NSURL URLWithString:@"http://localhost"];
+        NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
         AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
-        NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST" path:@"/upload" parameters:nil constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
-            [formData appendPartWithFileData:imageData name:@"photo" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
+        NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST" path:@"/posts" parameters:nil constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
+            [formData appendPartWithFileData:imageData name:@"post[photo]" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
         }];
         
-        AFHTTPRequestOperation *operation = [[[AFHTTPRequestOperation alloc] initWithRequest:request] autorelease];
-        [operation setUploadProgressBlock:^(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite) {
-            NSLog(@"Sent %d of %d bytes", totalBytesWritten, totalBytesExpectedToWrite);
+        AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+        [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+            NSLog(@"Success: %@", responseObject);
+        }failure:^(AFHTTPRequestOperation *operation, NSError *error){
+            NSLog(@"Failure: %@", error);
         }];
+        
         [operation start];
                 
         if (newMedia)
