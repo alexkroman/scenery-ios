@@ -20,7 +20,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"Add", @"Add");
-        self.tabBarItem.image = [UIImage imageNamed:@"second"];
+        self.tabBarItem.image = [UIImage imageNamed:@"camera"];
     }
     return self;
 }
@@ -93,11 +93,17 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                           objectForKey:UIImagePickerControllerOriginalImage];
         NSData *imageData = UIImageJPEGRepresentation(originalImage, 0.7);
        
-       // [self.request setData:imageData
-       //          withFileName:@"photo.jpg"
-       //        andContentType:@"image/jpeg"
-       //                forKey:@"photo"];
-       // [self.request start];
+        NSURL *url = [NSURL URLWithString:@"http://localhost"];
+        AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
+        NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST" path:@"/upload" parameters:nil constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
+            [formData appendPartWithFileData:imageData name:@"photo" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
+        }];
+        
+        AFHTTPRequestOperation *operation = [[[AFHTTPRequestOperation alloc] initWithRequest:request] autorelease];
+        [operation setUploadProgressBlock:^(NSInteger bytesWritten, NSInteger totalBytesWritten, NSInteger totalBytesExpectedToWrite) {
+            NSLog(@"Sent %d of %d bytes", totalBytesWritten, totalBytesExpectedToWrite);
+        }];
+        [operation start];
                 
         if (newMedia)
             UIImageWriteToSavedPhotosAlbum(originalImage, 

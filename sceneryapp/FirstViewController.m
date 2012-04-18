@@ -14,18 +14,28 @@
 
 @implementation FirstViewController
 
+@synthesize webView;
+
+- (void)dealloc{
+    [webView release];
+    [super dealloc];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.title = NSLocalizedString(@"New", @"New");
-        self.tabBarItem.image = [UIImage imageNamed:@"first"];
+        self.tabBarItem.image = [UIImage imageNamed:@"eye"];
     }
     return self;
 }
 							
 - (void)viewDidLoad
 {
+    NSURL *url = [NSURL URLWithString:@"http://howtomakeiphoneapps.com"];
+    NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
+    [webView loadRequest:requestURL];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

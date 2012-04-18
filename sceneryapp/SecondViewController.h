@@ -10,6 +10,8 @@
 
 #import <MobileCoreServices/MobileCoreServices.h>
 
+#import "AFNetworking.h"
+
 @interface SecondViewController : UIViewController
 <UIImagePickerControllerDelegate, 
 UINavigationControllerDelegate>
