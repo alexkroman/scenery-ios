@@ -15,6 +15,7 @@
 @implementation FirstViewController
 
 @synthesize webView;
+@synthesize activity;
 
 - (void)dealloc{
     [webView release];
@@ -34,19 +35,29 @@
     }
     return self;
 }
-							
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [activity stopAnimating];  
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView { 
+    [activity startAnimating];  
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+    [webView reload];
+}
+
 - (void)viewDidLoad
 {
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/posts"];
+    NSURL *url = [NSURL URLWithString:@"http://sceneryweb.herokuapp.com/posts"];
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestURL];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)viewDidAppear:(BOOL)animated{
-    [super viewDidAppear:animated];
-    [webView reload];
 }
 
 - (void)viewDidUnload
@@ -57,7 +68,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
 @end

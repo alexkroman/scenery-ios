@@ -40,7 +40,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return interfaceOrientation == UIInterfaceOrientationPortrait;
 }
 
 - (void) useCamera
@@ -93,7 +93,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
                           objectForKey:UIImagePickerControllerOriginalImage];
         NSData *imageData = UIImageJPEGRepresentation(originalImage, 0.7);
        
-        NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
+        NSURL *url = [NSURL URLWithString:@"http://sceneryweb.herokuapp.com"];
         AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:url];
         NSMutableURLRequest *request = [httpClient multipartFormRequestWithMethod:@"POST" path:@"/posts" parameters:nil constructingBodyWithBlock: ^(id <AFMultipartFormData>formData) {
             [formData appendPartWithFileData:imageData name:@"post[photo]" fileName:@"photo.jpg" mimeType:@"image/jpeg"];
