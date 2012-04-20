@@ -21,6 +21,10 @@
     [super dealloc];
 }
 
+- (IBAction)refreshWeb:(id)sender {
+    [webView reload];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -38,6 +42,11 @@
     [webView loadRequest:requestURL];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [webView reload];
 }
 
 - (void)viewDidUnload

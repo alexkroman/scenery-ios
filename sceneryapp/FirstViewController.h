@@ -12,6 +12,8 @@
     UIWebView *webView;
 }
 
+- (IBAction)refreshWeb:(id)sender;
+
 @property(nonatomic, retain) IBOutlet UIWebView *webView;
 
 @end
