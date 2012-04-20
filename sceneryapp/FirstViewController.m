@@ -51,6 +51,18 @@
     [webView reload];
 }
 
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSURL* absURL=[request.mainDocumentURL absoluteURL];
+    NSString* sURL=[absURL absoluteString];
+    
+    if ([@"ios://view" isEqualToString:sURL]) {
+        NSLog(@"Click");
+        return NO;
+        
+    }
+    return YES;
+}
+
 - (void)viewDidLoad
 {
     NSURL *url = [NSURL URLWithString:@"http://sceneryweb.herokuapp.com/posts"];

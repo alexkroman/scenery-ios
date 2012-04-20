@@ -23,6 +23,7 @@
 		3A116C1E153D291900B2DA2D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3A116C1C153D291900B2DA2D /* InfoPlist.strings */; };
 		3A116C21153D291900B2DA2D /* sceneryappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A116C20153D291900B2DA2D /* sceneryappTests.m */; };
 		3A116C2B153DA6DD00B2DA2D /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A116C2A153DA6DD00B2DA2D /* MobileCoreServices.framework */; };
+		3A69F68015420335004D8DB0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A69F67F15420335004D8DB0 /* CoreLocation.framework */; };
 		3AC76CF9153E5DA0005FAF54 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC76CE5153E5DA0005FAF54 /* AFHTTPClient.m */; };
 		3AC76CFA153E5DA0005FAF54 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC76CE7153E5DA0005FAF54 /* AFHTTPRequestOperation.m */; };
 		3AC76CFB153E5DA0005FAF54 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AC76CE9153E5DA0005FAF54 /* AFImageRequestOperation.m */; };
@@ -73,6 +74,7 @@
 		3A116C1F153D291900B2DA2D /* sceneryappTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sceneryappTests.h; sourceTree = "<group>"; };
 		3A116C20153D291900B2DA2D /* sceneryappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sceneryappTests.m; sourceTree = "<group>"; };
 		3A116C2A153DA6DD00B2DA2D /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		3A69F67F15420335004D8DB0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3AC76CE4153E5DA0005FAF54 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		3AC76CE5153E5DA0005FAF54 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		3AC76CE6153E5DA0005FAF54 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A69F68015420335004D8DB0 /* CoreLocation.framework in Frameworks */,
 				3A116C2B153DA6DD00B2DA2D /* MobileCoreServices.framework in Frameworks */,
 				3A116BE8153D291800B2DA2D /* UIKit.framework in Frameworks */,
 				3A116BEA153D291800B2DA2D /* Foundation.framework in Frameworks */,
@@ -128,6 +131,7 @@
 		3A116BD8153D291800B2DA2D = {
 			isa = PBXGroup;
 			children = (
+				3A69F67F15420335004D8DB0 /* CoreLocation.framework */,
 				3AC76CE3153E5DA0005FAF54 /* AFNetworking */,
 				3A116C2A153DA6DD00B2DA2D /* MobileCoreServices.framework */,
 				3A116BED153D291800B2DA2D /* sceneryapp */,
