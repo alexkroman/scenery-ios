@@ -33,7 +33,7 @@
 							
 - (void)viewDidLoad
 {
-    NSURL *url = [NSURL URLWithString:@"http://howtomakeiphoneapps.com"];
+    NSURL *url = [NSURL URLWithString:@"http://localhost:3000/posts"];
     NSURLRequest *requestURL = [NSURLRequest requestWithURL:url];
     [webView loadRequest:requestURL];
     [super viewDidLoad];
