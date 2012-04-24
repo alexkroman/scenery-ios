@@ -38,6 +38,8 @@
 		3AC76D07153E601C005FAF54 /* eye@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC76D05153E601B005FAF54 /* eye@2x.png */; };
 		3AC76D0A153E6070005FAF54 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC76D08153E6070005FAF54 /* camera.png */; };
 		3AC76D0B153E6070005FAF54 /* camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AC76D09153E6070005FAF54 /* camera@2x.png */; };
+		3AFFA8F51542427400E080DE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFA8F31542427400E080DE /* LoginViewController.m */; };
+		3AFFA8F61542427400E080DE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3AFFA8F41542427400E080DE /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +102,9 @@
 		3AC76D05153E601B005FAF54 /* eye@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eye@2x.png"; sourceTree = "<group>"; };
 		3AC76D08153E6070005FAF54 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		3AC76D09153E6070005FAF54 /* camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "camera@2x.png"; sourceTree = "<group>"; };
+		3AFFA8F21542427400E080DE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3AFFA8F31542427400E080DE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3AFFA8F41542427400E080DE /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +169,9 @@
 		3A116BED153D291800B2DA2D /* sceneryapp */ = {
 			isa = PBXGroup;
 			children = (
+				3AFFA8F21542427400E080DE /* LoginViewController.h */,
+				3AFFA8F31542427400E080DE /* LoginViewController.m */,
+				3AFFA8F41542427400E080DE /* LoginViewController.xib */,
 				3AC76D08153E6070005FAF54 /* camera.png */,
 				3AC76D09153E6070005FAF54 /* camera@2x.png */,
 				3AC76D04153E601B005FAF54 /* eye.png */,
@@ -317,6 +325,7 @@
 				3AC76D07153E601C005FAF54 /* eye@2x.png in Resources */,
 				3AC76D0A153E6070005FAF54 /* camera.png in Resources */,
 				3AC76D0B153E6070005FAF54 /* camera@2x.png in Resources */,
+				3AFFA8F61542427400E080DE /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +374,7 @@
 				3AC76D00153E5DA0005FAF54 /* AFURLConnectionOperation.m in Sources */,
 				3AC76D01153E5DA0005FAF54 /* AFXMLRequestOperation.m in Sources */,
 				3AC76D02153E5DA0005FAF54 /* UIImageView+AFNetworking.m in Sources */,
+				3AFFA8F51542427400E080DE /* LoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
